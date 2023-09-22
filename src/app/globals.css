@@ -2,26 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+body::-webkit-scrollbar {
+  width: 6px;               
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(46, 46, 48);    
+  border-radius: 20px;       
+}
+
+.contenedorglobal{
+  display: flex;
+  background: #F4F4F4;
+  margin: 2%;
+  border-radius: 10px;
+  width: 96%;
+  height: 90vh;
+}
+
+.contenedorderecho{
+  width: 50%;
+  margin-left: 4%;
+  margin-top: 10%;
+  margin-right: 3%;
+}
+
+.contenedorizquierdo{
+  width: 50%;
+}
+
+.tituloApp { 
+  font-size: 45px;
+  font-weight:  bold;
+  color: blueviolet;
+  margin-bottom: 9px;
+}
+
+.AppName{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.AppNameTitle{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.AppDescription{
+  font-size: 17px;
+  margin-bottom: 9px;
+}
+
+.Appbutton{
+  margin-top: 20px;
+  margin-bottom: 2px;
+}
+
+
+.disponibilidad{
+  font-size: 12px;
+}
+
+/* Estilos para pantallas más grandes (tabletas y escritorios) */
+@media screen and (min-width: 768px) {
+  .contenedorglobal {
+    width: 96%;   
+    height: 90%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Estilos para pantallas aún más grandes (por ejemplo, pantallas grandes de escritorio) */
+@media screen and (min-width: 1024px) {
+  .contenedorglobal {
+    width: 96%;  
+    height: 90vh
+  }
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, teléfonos móviles) */
+@media screen and (max-width: 767px) {
+  .contenedorglobal {
+    flex-direction: column; 
+    align-items: center; 
+    height: auto;   
+  }
+
+  .contenedorderecho,
+  .contenedorizquierdo {
+    width: 100%; 
+    margin: 2% 0;
+  }
+
+  .tituloApp {
+    font-size: 30px; 
+  }
+
+  .AppName{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .AppNameTitle{
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  
 }

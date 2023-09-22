@@ -1,0 +1,30 @@
+.buttonDolloawn{
+    width: 100px;
+    background: blueviolet;
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: aliceblue;
+}
+
+
+.buttonDolloawn:hover{
+    width: 100px;
+    background: rgb(131, 1, 252);
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: aliceblue;
+}
+
+
+@media screen and (max-width: 767px) {
+    .buttonDolloawn{
+        width: 100%;       
+    }
+    
+    
+    .buttonDolloawn:hover{
+        width: 100%;        
+    }
+}
