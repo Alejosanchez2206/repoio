@@ -4,18 +4,7 @@ import "./button.css"
 
 function Button() {
   const downloadFile = () => {
-    fetch('abp.apk').then(response => {
-      response.blob().then(blob => {
-          // Creating new object of PDF file
-          const fileURL = window.URL.createObjectURL(blob);
-          // Setting various property values
-          let alink = document.createElement('a');
-          alink.href = fileURL;
-          alink.download = 'abp.apk';
-          alink.click();
-      })
-  })
-   
+    window.location.href = "https://download1581.mediafire.com/zodxz2zmqgsgdvwLWT7eEHfrOXdf-APz9YukO9yFI3HYpULNdGQdCpJfAtAinKS7gQzTUs80IhVQei6u2FqAnSlxBr88kV7QO4_hKCWk3pgghwrn-RHERLnlSvE-JkkbgZYlfnsmTmOsqcJpYi_Kl6LwIV0QY1hAmClb1HvssjFpPQ/kgmcmavlbzee8wj/app-release.apk"
   }
   return (
    
